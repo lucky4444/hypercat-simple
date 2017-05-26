@@ -1,6 +1,6 @@
 package com.lbram.controller;
 
-import com.lbram.data.entity.Catalog;
+import com.lbram.data.entity.Catalogue;
 import com.lbram.data.entity.Item;
 import com.lbram.data.service.IItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +23,10 @@ public class CatController {
     }
 
     @GetMapping
-    public Catalog getCatalog() {
-        Catalog catalog = new Catalog();
-        catalog.setItems(itemService.findAll());
-        return catalog;
+    public Catalogue getCatalog() {
+        Catalogue catalogue = new Catalogue();
+        catalogue.setItems(itemService.findAll());
+        return catalogue;
     }
 
     @ResponseStatus(HttpStatus.OK)

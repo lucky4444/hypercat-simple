@@ -24,7 +24,7 @@ public class Item {
     public Item(String href, String description) {
         this.href = href;
         metadata = new ArrayList<>();
-        metadata.add(new Relation(Relation.REL_DESCRIPTION, description));
+        metadata.add(new Relation(StandardRelations.DESCRIPTION, description));
     }
 
     public String getHref() {

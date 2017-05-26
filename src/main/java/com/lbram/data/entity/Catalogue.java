@@ -4,18 +4,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.lbram.data.validator.ContainsDescription;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @JsonPropertyOrder({"metadata", "items"})
-public class Catalog {
+public class Catalogue {
 
     @ContainsDescription
-    @JsonProperty("catalog-metadata")
+    @JsonProperty("catalogue-metadata")
     private List<Relation> metadata;
 
     private List<Item> items;
 
-    public Catalog() {
+    public Catalogue() {
+        metadata = new ArrayList<>();
+        metadata.add(new Relation(StandardRelations.DESCRIPTION,"A Simple Hypercat Catalogue"));
+        metadata.add(new Relation(StandardRelations.CONTENT_TYPE,"application/vnd.hypercat.catalogue+json"));
     }
 
     public List<Item> getItems() {

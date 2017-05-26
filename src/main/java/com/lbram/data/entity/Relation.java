@@ -1,12 +1,11 @@
 package com.lbram.data.entity;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.constraints.NotNull;
 
 public class Relation {
-
-    public static final String REL_DESCRIPTION = "urn:X-hypercat:rels:hasDescription:en";
 
     @Id
     @NotNull
