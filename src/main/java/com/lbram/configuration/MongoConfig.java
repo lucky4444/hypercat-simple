@@ -12,15 +12,15 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  */
 @EnableMongoRepositories(basePackages = "com.lbram.data.repository")
 @Configuration
-public class MongoConfig{
+public class MongoConfig {
 
-  @Bean
-  public Mongo mongo() throws Exception {
-    return new MongoClient("localhost");
-  }
+    @Bean
+    public Mongo mongo() throws Exception {
+        return new MongoClient("localhost");
+    }
 
-  @Bean
-  public MongoTemplate mongoTemplate() throws Exception{
-    return new MongoTemplate(mongo(),"hypercat");
-  }
+    @Bean
+    public MongoTemplate mongoTemplate() throws Exception {
+        return new MongoTemplate(mongo(), "hypercat");
+    }
 }

@@ -10,36 +10,36 @@ import java.util.List;
 
 public class Item {
 
-  @Id
-  @NotNull
-  private String href;
+    @Id
+    @NotNull
+    private String href;
 
-  @ContainsDescription
-  @JsonProperty("i-object-metadata")
-  private List<Relation> metadata;
+    @ContainsDescription
+    @JsonProperty("item-metadata")
+    private List<Relation> metadata;
 
-  public Item(){
-  }
+    public Item() {
+    }
 
-  public Item(String href, String description){
-    this.href = href;
-    metadata = new ArrayList<>();
-    metadata.add(new Relation(Relation.REL_DESCRIPTION,description));
-  }
+    public Item(String href, String description) {
+        this.href = href;
+        metadata = new ArrayList<>();
+        metadata.add(new Relation(Relation.REL_DESCRIPTION, description));
+    }
 
-  public String getHref() {
-    return href;
-  }
+    public String getHref() {
+        return href;
+    }
 
-  public void setHref(String href) {
-    this.href = href;
-  }
+    public void setHref(String href) {
+        this.href = href;
+    }
 
-  public List<Relation> getMetadata() {
-    return metadata;
-  }
+    public List<Relation> getMetadata() {
+        return metadata;
+    }
 
-  public void setMetadata(List<Relation> metadata) {
-    this.metadata = metadata;
-  }
+    public void setMetadata(List<Relation> metadata) {
+        this.metadata = metadata;
+    }
 }

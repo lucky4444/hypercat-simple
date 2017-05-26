@@ -16,24 +16,24 @@ import java.util.Set;
  */
 public class DescriptionValidatorTest {
 
-  private Item item;
+    private Item item;
 
-  @Before
-  public void setup(){
-    item = new Item();
-  }
+    @Before
+    public void setup() {
+        item = new Item();
+    }
 
-  @Test
-  public void hasDescriptionRelation(){
-    Set<ConstraintViolation<Item>> violations = validateClass(item);
-    Assert.assertEquals(violations.size(), 0);
-  }
+    @Test
+    public void hasDescriptionRelation() {
+        Set<ConstraintViolation<Item>> violations = validateClass(item);
+        Assert.assertEquals(violations.size(), 0);
+    }
 
-  private Set<ConstraintViolation<Item>> validateClass(Item item) {
-    ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-    Validator validator = factory.getValidator();
-    Set<ConstraintViolation<Item>> violations = validator.validate(item);
-    return violations;
-  }
+    private Set<ConstraintViolation<Item>> validateClass(Item item) {
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        Validator validator = factory.getValidator();
+        Set<ConstraintViolation<Item>> violations = validator.validate(item);
+        return violations;
+    }
 
 }

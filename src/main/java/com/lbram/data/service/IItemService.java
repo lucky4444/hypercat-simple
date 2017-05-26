@@ -9,13 +9,15 @@ import java.util.List;
  * Created by lbram on 26.05.2017.
  */
 public interface IItemService {
-  void save(Item item);
+    void save(Item item);
 
-  void delete(Item item);
+    void delete(Item item);
 
-  List<Item> find(Query query);
+    List<Item> find(Query query);
 
-  List<Item> findAll();
+    List<Item> findAll();
 
-  void deleteAll();
+    void deleteAll();
+
+    Item findByHref(String href);
 }
