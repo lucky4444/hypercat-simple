@@ -3,7 +3,9 @@ package com.lbram.data.service;
 import com.lbram.data.entity.Item;
 import com.lbram.data.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
@@ -50,5 +52,15 @@ public class ItemService implements IItemService {
     @Override
     public Item findByHref(String href){
         return itemRepository.findOne(href);
+    }
+
+    @Override
+    public List<Item> findByExample(Item item){
+        return itemRepository.findAll(Example.of(item));
+    }
+
+    @Override
+    public List<Item> findByQuery(Query query){
+        return mongoTemplate.find(query,Item.class);
     }
 }

@@ -21,7 +21,7 @@ public class HypercatSimpleApplication {
     public CommandLineRunner loadData() {
         return (args) ->
         {
-            itemService.deleteAll();
+//            itemService.deleteAll();
 //		  itemService.save(new Item("localhost:8001/cat?href=https://144.76.238.39/Thingworx/Things/iTAC.SAMMobile.ServiceThing/Services/getMachineData?machineName=R1","Ist eine Maschine.."));
 //		  itemService.save(new Item("localhost:8001/cat?href=https://144.76.238.39/Thingworx/Things/iTAC.SAMMobile.ServiceThing/Services/getMachineData?machineName=R2","Ist eine Maschine.."));
 //		  itemService.save(new Item("localhost:8001/cat?href=https://144.76.238.39/Thingworx/Things/iTAC.SAMMobile.ServiceThing/Services/getMachineData?machineName=CMT1","Ist eine Maschine.."));
