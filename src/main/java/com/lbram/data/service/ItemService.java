@@ -12,7 +12,6 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Created by lbram on 26.05.2017.
@@ -76,13 +75,19 @@ public class ItemService implements IItemService {
         if (href != null) {
             query.addCriteria(Criteria.where("href").is(href));
         }
-        if (rel != null && val != null){
-            query.addCriteria(Criteria.where("metadata").is(new Relation(rel,val)));
-        }else if (rel != null){
+        if (rel != null && val != null) {
+            query.addCriteria(Criteria.where("metadata").is(new Relation(rel, val)));
+        } else if (rel != null) {
             query.addCriteria(Criteria.where("metadata.rel").is(rel));
-        }else if (val != null){
+        } else if (val != null) {
             query.addCriteria(Criteria.where("metadata.val").is(val));
         }
-        return mongoTemplate.find(query,Item.class);
+        return mongoTemplate.find(query, Item.class);
+    }
+
+    @Override
+    public void update(String href, Item item) {
+        itemRepository.delete(href);
+        itemRepository.save(item);
     }
 }

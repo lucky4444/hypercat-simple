@@ -26,4 +26,6 @@ public interface IItemService {
     List<Item> findByQuery(Query query);
 
     List<Item> simpleSearch(String href, String rel, String val);
+
+    void update(String href, Item item);
 }

@@ -19,12 +19,12 @@ public class DescriptionValidatorTest {
 
     @Test
     public void hasDescriptionRelation() {
-        Item item = new Item("bla","Test Description");
+        Item item = new Item("bla", "Test Description");
         Set<ConstraintViolation<Item>> violations = validateClass(item);
         Assert.assertEquals(violations.size(), 0);
     }
 
-    public void hasNoDescriptionRelation(){
+    public void hasNoDescriptionRelation() {
         Item item = new Item();
         Set<ConstraintViolation<Item>> violations = validateClass(item);
         Assert.assertNotEquals(violations.size(), 0);

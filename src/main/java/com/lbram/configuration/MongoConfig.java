@@ -5,7 +5,6 @@ import com.mongodb.MongoClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.mongodb.core.MongoClientFactoryBean;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
@@ -17,15 +16,21 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 public class MongoConfig {
 
     @Value("${spring.data.mongodb.database}")
-    private String mongoDB;
+    private String database;
+
+    @Value("${spring.data.mongodb.host}")
+    private String host;
+
+    @Value("${spring.data.mongodb.port}")
+    private Integer port;
 
     @Bean
     public Mongo mongo() throws Exception {
-        return new MongoClient("localhost");
+        return new MongoClient("localhost", port);
     }
 
     @Bean
     public MongoTemplate mongoTemplate() throws Exception {
-        return new MongoTemplate(mongo(), mongoDB);
+        return new MongoTemplate(mongo(), database);
     }
 }
