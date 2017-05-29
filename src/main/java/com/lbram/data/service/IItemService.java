@@ -1,7 +1,6 @@
 package com.lbram.data.service;
 
 import com.lbram.data.entity.Item;
-import org.springframework.data.domain.Example;
 import org.springframework.data.mongodb.core.query.Query;
 
 import java.util.List;
@@ -25,4 +24,6 @@ public interface IItemService {
     List<Item> findByExample(Item item);
 
     List<Item> findByQuery(Query query);
+
+    List<Item> simpleSearch(String href, String rel, String val);
 }

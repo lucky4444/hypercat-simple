@@ -18,9 +18,9 @@ public class Catalogue {
 
     public Catalogue() {
         metadata = new ArrayList<>();
-        metadata.add(new Relation(StandardRelations.DESCRIPTION,"A Simple Hypercat Catalogue"));
-        metadata.add(new Relation(StandardRelations.CONTENT_TYPE,"application/vnd.hypercat.catalogue+json"));
-        metadata.add(new Relation(StandardRelations.Catalogue.SUPPORTS_SEARCH,StandardValues.Catalogue.SIMPLE_SEARCH));
+        metadata.add(new Relation(StandardRelations.DESCRIPTION, "A Simple Hypercat Catalogue"));
+        metadata.add(new Relation(StandardRelations.CONTENT_TYPE, "application/vnd.hypercat.catalogue+json"));
+        metadata.add(new Relation(StandardRelations.Catalogue.SUPPORTS_SEARCH, StandardValues.Catalogue.SIMPLE_SEARCH));
     }
 
     public List<Item> getItems() {

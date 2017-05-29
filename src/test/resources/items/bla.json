@@ -1,0 +1,13 @@
+{
+  "href": "http://blablabla.bla/bla?bla=blabla&blabla=bla",
+  "item-metadata": [
+    {
+      "rel": "urn:X-hypercat:rels:hasDescription:en",
+      "val": "This is just some resource, named bla, for people who like blas."
+    },
+    {
+      "rel": "urn:X-hypercat:rels:isContentType",
+      "val": "application/json"
+    }
+  ]
+}

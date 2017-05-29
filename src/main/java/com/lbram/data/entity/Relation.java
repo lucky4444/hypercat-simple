@@ -1,7 +1,6 @@
 package com.lbram.data.entity;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.constraints.NotNull;
 

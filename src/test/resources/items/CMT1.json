@@ -1,0 +1,42 @@
+{
+  "href":"https://144.76.238.39/Thingworx/Things/iTAC.SAMMobile.ServiceThing/Services/getMachineData?machineName=CMT1",
+  "item-metadata":
+  [
+    {
+      "rel":"urn:X-hypercat:rels:hasDescription:en",
+      "val":"This Resource simulates a machine for the SamMobile Showcase."
+    },
+    {
+      "rel":"urn:X-hypercat:rels:isContentType",
+      "val":"application/json"
+    },
+    {
+      "rel":"urn:X-sammobile:rels:hasName",
+      "val":"CMT1"
+    },
+    {
+      "rel":"urn:X-sammobile:rels:hasType",
+      "val":"machine"
+    },
+    {
+      "rel":"urn:X-sammobile:rels:hasMaintenanceDate",
+      "val":"25.01.2013"
+    },
+    {
+      "rel":"urn:X-sammobile:rels:hasDeploymentDate",
+      "val":"05.04.2009"
+    },
+    {
+      "rel":"urn:X-sammobile:rels:hasMarkerId",
+      "val":"3"
+    },
+    {
+      "rel":"urn:X-sammobile:rels:hasAuthorization",
+      "val":"urn:X-sammobile:authorization:appkey"
+    },
+    {
+      "rel":"urn:X-sammobile:rels:hasAppKey",
+      "val":"9ed7f548-6998-4d9a-ba9e-1c317204bbd1"
+    }
+  ]
+}
